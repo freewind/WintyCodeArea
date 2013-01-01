@@ -11,8 +11,8 @@ namespace MyWindowsLiveWriterPlugin
         private const string ESCAPE_CODE = "ESCAPE_CODE";//是否转义代码
         private const string REMOVE_BR = "REMOVE_BR"; // 是否把代码中因为复制到live writer产生的<br />去掉
 
-        public const string DEFAULT_FRONT_CODE = "<div class=\"mycode\">";
-        public const string DEFAULT_BACK_CODE = "</div>";
+        public const string DEFAULT_FRONT_CODE = "<pre><code>";
+        public const string DEFAULT_BACK_CODE = "</code></pre>";
         public const bool   DEFAULT_ESCAPE_CODE = false;
         public const bool DEFAULT_REMOVE_BR = true;
 
