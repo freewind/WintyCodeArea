@@ -9,10 +9,12 @@ namespace MyWindowsLiveWriterPlugin
         private const string FRONT_CODE = "FRONT_CODE";//前缀代码
         private const string BACK_CODE = "BACK_CODE";//后缀代码
         private const string ESCAPE_CODE = "ESCAPE_CODE";//是否转义代码
+        private const string REMOVE_BR = "REMOVE_BR"; // 是否把代码中因为复制到live writer产生的<br />去掉
 
         public const string DEFAULT_FRONT_CODE = "<div class=\"mycode\">";
         public const string DEFAULT_BACK_CODE = "</div>";
         public const bool   DEFAULT_ESCAPE_CODE = false;
+        public const bool DEFAULT_REMOVE_BR = true;
 
         public WintyCodeAreaSettings(IProperties properties)
         {
@@ -52,6 +54,15 @@ namespace MyWindowsLiveWriterPlugin
             set
             {
                 m_properties.SetBoolean(ESCAPE_CODE, value);
+            }
+        }
+
+        public bool RemoveBr {
+            get {
+                return m_properties.GetBoolean(REMOVE_BR, DEFAULT_REMOVE_BR);
+            }
+            set {
+                m_properties.SetBoolean(REMOVE_BR, value);
             }
         }
 

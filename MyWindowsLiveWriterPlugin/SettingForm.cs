@@ -38,5 +38,8 @@ namespace MyWindowsLiveWriterPlugin
             chkEscapeCode.Checked = m_settings.EscapeCode;
             textBackCode.Text = m_settings.BackCode;
         }
+
+        private void chkEscapeCode_CheckedChanged(object sender, EventArgs e) {
+        }
     }
 }

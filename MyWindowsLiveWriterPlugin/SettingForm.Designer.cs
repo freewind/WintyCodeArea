@@ -37,11 +37,12 @@
             this.btnRestoreDefault = new System.Windows.Forms.Button();
             this.copyright = new System.Windows.Forms.Label();
             this.theLinkLabel = new System.Windows.Forms.LinkLabel();
+            this.chkRemoveBr = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(259, 211);
+            this.btnOK.Location = new System.Drawing.Point(259, 240);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(113, 29);
             this.btnOK.TabIndex = 0;
@@ -58,6 +59,7 @@
             this.chkEscapeCode.TabIndex = 1;
             this.chkEscapeCode.Text = "Escape Content to HTML(Optional)";
             this.chkEscapeCode.UseVisualStyleBackColor = true;
+            this.chkEscapeCode.CheckedChanged += new System.EventHandler(this.chkEscapeCode_CheckedChanged);
             // 
             // labelFont
             // 
@@ -71,7 +73,7 @@
             // labelBack
             // 
             this.labelBack.AutoSize = true;
-            this.labelBack.Location = new System.Drawing.Point(44, 125);
+            this.labelBack.Location = new System.Drawing.Point(44, 154);
             this.labelBack.Name = "labelBack";
             this.labelBack.Size = new System.Drawing.Size(77, 12);
             this.labelBack.TabIndex = 4;
@@ -87,7 +89,7 @@
             // 
             // textBackCode
             // 
-            this.textBackCode.Location = new System.Drawing.Point(125, 125);
+            this.textBackCode.Location = new System.Drawing.Point(125, 154);
             this.textBackCode.Multiline = true;
             this.textBackCode.Name = "textBackCode";
             this.textBackCode.Size = new System.Drawing.Size(247, 64);
@@ -95,7 +97,7 @@
             // 
             // btnRestoreDefault
             // 
-            this.btnRestoreDefault.Location = new System.Drawing.Point(46, 211);
+            this.btnRestoreDefault.Location = new System.Drawing.Point(46, 240);
             this.btnRestoreDefault.Name = "btnRestoreDefault";
             this.btnRestoreDefault.Size = new System.Drawing.Size(188, 29);
             this.btnRestoreDefault.TabIndex = 7;
@@ -106,7 +108,7 @@
             // copyright
             // 
             this.copyright.AutoSize = true;
-            this.copyright.Location = new System.Drawing.Point(109, 254);
+            this.copyright.Location = new System.Drawing.Point(109, 283);
             this.copyright.Name = "copyright";
             this.copyright.Size = new System.Drawing.Size(215, 12);
             this.copyright.TabIndex = 8;
@@ -115,18 +117,31 @@
             // theLinkLabel
             // 
             this.theLinkLabel.AutoSize = true;
-            this.theLinkLabel.Location = new System.Drawing.Point(123, 275);
+            this.theLinkLabel.Location = new System.Drawing.Point(123, 304);
             this.theLinkLabel.Name = "theLinkLabel";
             this.theLinkLabel.Size = new System.Drawing.Size(185, 12);
             this.theLinkLabel.TabIndex = 9;
             this.theLinkLabel.TabStop = true;
             this.theLinkLabel.Text = "http://www.blogjava.net/wintys";
             // 
+            // chkRemoveBr
+            // 
+            this.chkRemoveBr.AutoSize = true;
+            this.chkRemoveBr.Checked = true;
+            this.chkRemoveBr.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkRemoveBr.Location = new System.Drawing.Point(127, 117);
+            this.chkRemoveBr.Name = "chkRemoveBr";
+            this.chkRemoveBr.Size = new System.Drawing.Size(102, 16);
+            this.chkRemoveBr.TabIndex = 10;
+            this.chkRemoveBr.Text = "Remove <br />";
+            this.chkRemoveBr.UseVisualStyleBackColor = true;
+            // 
             // SettingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(420, 299);
+            this.ClientSize = new System.Drawing.Size(420, 337);
+            this.Controls.Add(this.chkRemoveBr);
             this.Controls.Add(this.theLinkLabel);
             this.Controls.Add(this.copyright);
             this.Controls.Add(this.btnRestoreDefault);
@@ -154,5 +169,6 @@
         private System.Windows.Forms.Button btnRestoreDefault;
         private System.Windows.Forms.Label copyright;
         private System.Windows.Forms.LinkLabel theLinkLabel;
+        private System.Windows.Forms.CheckBox chkRemoveBr;
     }
 }
